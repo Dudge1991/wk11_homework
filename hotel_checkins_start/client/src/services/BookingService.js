@@ -18,7 +18,8 @@ const BookingService =  {
   },
 
   updateBooking(booking) {
-    return fetch(baseURL + booking._id, {
+    const bookingId = booking._id;
+    return fetch(baseURL + bookingId, {
       method: 'PUT',
       body: JSON.stringify(booking),
       headers: {
